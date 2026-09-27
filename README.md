@@ -28,22 +28,4 @@ This system solves that by integrating **Graph-RAG**:
 - **🔍 Deep Inspection Dashboard:** Streamlit UI featuring expandable inspection panels for executed Cypher statements, raw Neo4j JSON responses, and vector similarity matches.
 - **🟢 Real-Time Diagnostics:** Built-in connection testing and ping verification for both FastAPI and Neo4j instances prior to query execution.
 
----
 
-## 🏗️ System Architecture
-┌─────────────────────────┐
-                   │  Streamlit Frontend UI  │
-                   └────────────┬────────────┘
-                                │ HTTP Requests
-                                ▼
-                   ┌─────────────────────────┐
-                   │   FastAPI REST Engine   │
-                   └────────────┬────────────┘
-                                │ Invokes Graph
-                                ▼
-                   ┌─────────────────────────┐
-                   │  LangGraph Router Agent │
-                   └─────┬───────────┬───────┘
-                         │           │
-       ┌─────────────────┘           └─────────────────┐
-       ▼                                               ▼
