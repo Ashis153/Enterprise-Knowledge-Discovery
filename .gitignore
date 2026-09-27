@@ -1,0 +1,7 @@
+.env
+.local/
+*.zip
+*.log
+__pycache__/
+.venv/
+venv/
